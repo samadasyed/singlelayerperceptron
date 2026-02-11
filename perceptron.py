@@ -40,3 +40,16 @@ class Perceptron:
 
             # Print
             print(f'Input: {input}, Prediction: {prediction}, Label: {label}')
+
+    # Initialize Perceptron
+    perceptron = Perceptron(input_size = 2, num_epochs = 1_000, learning_rate = 0.01)
+
+    ##### Training #####
+    training_inputs = [[1, 1], [1, 0], [0, 1], [0, 0]]
+    training_labels = [1, 0, 0, 0]
+    perceptron.train(training_inputs, training_labels)
+
+    ##### Testing #####
+    testing_inputs = [[1, 1], [0, 1]]
+    testing_labels = [1, 0]
+    perceptron.test(testing_inputs, testing_labels)        
